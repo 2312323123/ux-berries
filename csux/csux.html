@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>csux</title>
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700|Nunito+Sans:400,700">
+  <link rel="stylesheet" href="../hero/hero.css">
+  <link rel="stylesheet" href="../kreska/kreska.css">
+  <link rel="stylesheet" href="../stopka/footer.css">
+  <link rel="stylesheet" href="../mainpage/mainpage.css">
+  <link rel="stylesheet" href="../new_navbar/navbar.css">
+  <link rel="stylesheet" href="./csux_hero/csux_hero.css">
+  <link rel="stylesheet" href="./csux_mainpage/mainpage.css">
+</head>
+<body>
+  <!-- nav -->
+  <nav class="nav">
+    <a href="../index.html" class="nav-brand">
+      <img src="../new_navbar/nav_logo.svg">
+    </a>
+    <i style="background: bluee;" class="nav-accordion material-icons-outlined">menu</i>
+    <ul class="nav-panel">
+      <li>
+        <a class="nav-link" href="#">O kole</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">CSUX</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Współpraca</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Dołącz do nas</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+
+  <script defer>
+    let acc = document.getElementsByClassName("nav-accordion");
+    let i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        let list = this.nextElementSibling;
+        this.classList.toggle("nav-accordion-active");
+
+        if(list.classList.contains("nav-panel-padding")) {
+          setTimeout(() => list.classList.toggle("nav-panel-padding"), 190);
+        } else {
+          list.classList.toggle("nav-panel-padding");
+        }
+        
+        let panel = list;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+  <!-- /nav -->
+
+  <!-- hero -->
+  <header class="w-100 csux_hero-tlo">
+    <div class="w-100 container csux_hero-inside">
+      <div class="row align-items-center csux-hero">
+        <div class="col-xl-8 col-lg-8 col-12">
+          <div class="col-9">
+            <div class="csux-hero-small-screen-margin">
+              <h2 class="csux-hero-text-small">CIEMNA STRONA UX #7</h2>
+              <h2 class="csux-hero-text-big">YOUR JOURNEY STARTS HERE!</h2>
+              <h2 class="csux-hero-text-small">KRAKOWSKI PARK TECHNOLOGICZNY</h2>
+              <br>
+              <h2 class="csux-hero-text-small">7 MAJA 2022</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 text-lg-center csux-hero-small-screen-margin">
+          <button class="csux-hero-button">Zapisz się!</button>
+        </div>
+      </div>
+    </div>
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob3"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob4"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob5"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+
+      <script defer>
+        const animate1 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob3' },
+          { path: '#blob4' },
+          { duration: 15000 }
+        );
+        const animate2 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob4' },
+          { path: '#blob5' },
+          { duration: 15000 }
+        );
+        const animate3 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob5' },
+          { path: '#blob3' },
+          { duration: 15000 }
+        );
+
+        animate1.chain(animate2);
+        animate2.chain(animate3);
+        animate3.chain(animate1);
+        animate1.start();
+      </script>
+    </div>
+  </header>
+  <!-- /hero -->
+
+  <!-- main page -->
+  <section class="container">
+    <h2 class="mainpage-header">O konferencji</h2>
+
+    <div class="mainpage-1-image-2-text-grid">
+      <div class="grid-image-konferencja-field">
+        
+    <svg class="image-svg" viewBox="0 0 581 401" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+    stroke-linejoin="round">
+    <clipPath id="mask">
+      <path
+      d="M450.97 62.3C488.06 79.79 516.97 113.78 539.81 158.22C562.78 202.55 579.67 257.33 559.08 300.45C538.62 343.68 480.41 375.25 419.56 388.56C358.7 401.76 295.08 396.59 230.8 381.85C166.51 367.11 101.7 342.69 71.21 300.89C40.58 258.98 
+          44.28 199.47 66.32 151.07C88.5 102.67 129.16 65.38 175.09 49.1C221.03 32.93 272.24 37.77 320.56 40.74C368.74 43.71 414.01 44.7 450.97 62.3">
+    </clipPath>
+    <image width="100%" height="100%" clip-path="url(#mask)" preserveAspectRatio="xMidYMid slice"
+        href="./csux_mainpage/images/o_konferencji.png" />
+    </svg>
+        <!-- <img src="./images/o_konferencji.png" class="grid-image-konferencja"> -->
+        <img src="./csux_mainpage/images/chmurka_1.png" class="grid-chmurka-1">
+        <img src="./csux_mainpage/images/chmurka_2.png" class="grid-chmurka-2">
+      </div>
+      <div>
+        <h2 class="grid-caption-konferencja-1">Ciemna Strona UX #7</h2>
+        <p class="mainpage-paragraph">
+          Tegoroczna edycja konferencji skupia się na motywie podróży.Jako uczestnicy będziecie mieli okazję posłuchać historii osób, które podobnie jak Wy mierzyły się z problemami w branży.
+          <br><br>
+          Jak znaleźć swoją pierwszą pracę? Jak stworzyć swój pierwszy projekt do portfolio? Gdzie szukać sprawdzonej wiedzy i mentoringu?
+          <br>
+          Twoja podróż zaczyna się tutaj!
+        </p>
+      </div>
+      <div>
+        <h2 class="grid-caption-konferencja-2">Poprzednie edycje</h2>
+        <p class="mainpage-paragraph">
+          Ciemna Strona UX prowadzona jest od 2015 roku i jest jednym z najlepiej rozpoznawanych cyklicznych wydarzeń w branży UX na terenie Krakowa!
+          <br><br>
+          W trakcie dotychczasowych sześciu edycji odwiedziło nas ok. 1800 uczestników, ponad 60 prelegentów_ek!
+        </p>
+      </div>
+    </div>
+    
+
+    <h2 class="mainpage-header-centered">Agenda</h2>
+    <h3>jeszcze TBA =(</h3>
+    <h2 class="mainpage-header">Sponsorzy</h2>
+    <div class="partnerzy-sponsorzy">
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+    </div>
+    </div>
+
+    <h2 class="mainpage-header">Partnerzy medialni</h2>
+    <div class="partnerzy-sponsorzy">
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+      <div style="width:100px;height:90px;background: lightgray; margin: 0.5em 1em;"></div>
+    </div>
+  </section>
+  <!-- /main page -->
+    
+  <!-- footer -->
+  <footer class="footer-background w-100">
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion-flipped"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob6"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob7"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob8"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+
+      <script defer>
+        const animate4 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob6' },
+          { path: '#blob7' },
+          { duration: 15000 }
+        );
+        const animate5 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob7' },
+          { path: '#blob8' },
+          { duration: 15000 }
+        );
+        const animate6 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob8' },
+          { path: '#blob6' },
+          { duration: 15000 }
+        );
+  
+        animate4.chain(animate5);
+        animate5.chain(animate6);
+        animate6.chain(animate4);
+        animate4.start();
+      </script>
+    </div>
+    <!-- /svg -->
+
+    <div class="container footer-margin">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 footer-column">
+          <img class="footer-logo" src="../stopka/footer_icons/logo_footer.svg">
+          <div class="footer-email-wydzial">
+            <p>itberries.wh.agh@gmail.com</p>
+            <p>Wydział Humanistyczny AGH<br>Antoniego Gramatyka 8A<br>30-071 Kraków</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 footer-column">
+          <h2 class="footer-header">Mapa strony</h2>
+          <ul class="footer-page-list">
+            <li><a href="/">O kole</a></li>
+            <li><a href="/">CS UX</a></li>
+            <li><a href="/">Współpraca</a></li>
+            <li><a href="/">Dołącz do nas</a></li>
+            <li><a href="/">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 footer-column">
+          <h2 class="footer-header">Znajdź nas!</h2>
+          <div class="footer-social-icons">
+            <a href="/"><img src="../stopka/footer_icons/facebook.svg"></a>
+            <a href="/"><img src="../stopka/footer_icons/linkedin.svg"></a>
+            <a href="/"><img src="../stopka/footer_icons/Instagram.svg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="credits">
+    <div class="credits-text credits-div-1">© UXberries <span id="year"></span></div>
+    <div class="credits-text credits-div-2">designed by: UXberries</div>
+    <div class="credits-div-3 d-flex flex-column flex-xxl-row">
+      <span class="credits-text">
+        developed by: 
+      </span>
+      <span class="credits-text">
+        Ireneusz Jasinowski<span class="xxl-przecinek">,</span>
+      </span>
+      <span class="credits-text">
+        Maciej Piotrowski
+      </span>
+    </div>
+  </div>
+  <script defer>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <!-- /footer -->
+</body>
+</html>

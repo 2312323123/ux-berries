@@ -1,0 +1,56 @@
+/* credit to https://app.haikei.app/ */
+
+body {
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+.blob-motion {
+  position: absolute;
+  transform: scale(105%, 1);
+  bottom: 0;
+}
+
+.blob-motion-flipped {
+  position: absolute;
+  transform: scale(105%, 1) rotate(180deg);
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .blob-motion {
+    transform: scale(105%, 2.5);
+    transform-origin: bottom;
+  }
+
+  .blob-motion-flipped {
+    /* transform order matters... ^^ */
+    transform: translate(0, -100%) scale(105%, 2.5) rotate(180deg);
+    transform-origin: bottom;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .blob-motion {
+    transform: scale(105%, 1.5);
+    transform-origin: bottom;
+  }
+
+  .blob-motion-flipped {
+    /* transform order matters... ^^ */
+    transform: translate(0, -100%) scale(105%, 1.5) rotate(180deg);
+    transform-origin: bottom;
+  }
+}
+
+/* usunac potem */
+.pseudo-hero {
+  background-color: #e4def4;
+  width: 100vw;
+  height: 300px;
+  position: relative;
+}
+* {
+  margin: 0;
+  padding: 0;
+}

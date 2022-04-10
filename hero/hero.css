@@ -1,0 +1,119 @@
+.hero-tlo {
+  background-color: #e4def4;
+  /* background: linear-gradient(#e66465, #9198e5); */
+
+  /* zeby kreska dzialala */
+  padding-bottom: 5rem;
+  position: relative;
+}
+
+.hero-container {
+  margin: 0 auto;
+}
+
+.hero-text-big-1 {
+  font-size: 4rem;
+  font-family: Inter;
+  font-weight: bold;
+}
+
+.hero-text-big-2 {
+  font-size: 4rem;
+  font-family: Inter;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  display: inline-block;
+  margin: 0 0.2rem;
+}
+
+.hero-grafika-margin {
+  margin-top: 2rem;
+}
+
+.hero-margin {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 992px) {
+  .hero-grafika-margin {
+    display: none;
+  }
+  .hero-text-big-1,
+  .hero-text-big-2 {
+    font-size: 2.4rem;
+  }
+}
+
+.hero-button {
+  color: white;
+  font: 600 1.125rem Inter, sans-serif;
+  background-color: #4923b5;
+  padding: 1rem 2.5rem;
+  border-radius: 30rem;
+  border-color: transparent;
+  transition: 0.2s;
+}
+
+.hero-button:hover {
+  background-color: pink;
+  transition: 0.2s;
+}
+
+@media (max-width: 992px) {
+  .hero-button {
+    font: 600 1rem Inter, sans-serif;
+    padding: 0.75rem 2rem;
+    transition: 0.1s;
+  }
+
+  .hero-button:hover {
+    transition: 0.1s;
+  }
+}
+
+/* przejsciowy rozmiar */
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* body {
+    background-color: black;
+  } */
+
+  .hero-text-big-1 {
+    font-size: 3rem;
+    font-family: Inter;
+    font-weight: bold;
+  }
+
+  .hero-text-big-2 {
+    font-size: 3rem;
+    font-family: Inter;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    margin: 0 0.2rem;
+  }
+
+  .hero-button {
+    font: 600 1rem Inter, sans-serif;
+    padding: 0.75rem 2rem;
+    transition: 0.15s;
+  }
+
+  .hero-button:hover {
+    transition: 0.15s;
+  }
+
+  /* klasa image */
+  .hero-grafika-margin {
+    margin-left: -4rem;
+  }
+}
+/* 
+.my-hero-text-left {
+  background-color: aqua;
+}
+
+.my-hero-text-right {
+  background: red;
+} */

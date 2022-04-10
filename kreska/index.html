@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kreska</title>
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+  <link rel="stylesheet" href="kreska.css">
+
+</head>
+<body>
+  <!-- hero puppet -->
+  <div class="pseudo-hero">
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion-flipped"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob6"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob7"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob8"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+
+      <script defer>
+        const animate4 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob6' },
+          { path: '#blob7' },
+          { duration: 15000 }
+        );
+        const animate5 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob7' },
+          { path: '#blob8' },
+          { duration: 15000 }
+        );
+        const animate6 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob8' },
+          { path: '#blob6' },
+          { duration: 15000 }
+        );
+  
+        animate4.chain(animate5);
+        animate5.chain(animate6);
+        animate6.chain(animate4);
+        animate4.start();
+      </script>
+    </div>
+    <!-- /svg -->
+  </div>
+</body>
+</html>

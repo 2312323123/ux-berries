@@ -1,0 +1,177 @@
+.footer-background {
+  background-color: #e4def4;
+  background: linear-gradient(180deg, #eae4f9 0%, #d8c9ff 100%);
+  /* dla kreski */
+  position: relative;
+  padding-top: 7rem;
+}
+
+.credits {
+  font: 400 1.125rem/150% "Nunito Sans", sans-serif;
+  color: white;
+  background-color: #514c9a;
+}
+
+@media (max-width: 1400px) {
+  .xxl-przecinek {
+    display: none;
+  }
+}
+
+.credits-text {
+  font: 400 1.125rem/1rem 'Nunito-Sans', sans-serif;
+  margin-right: 0.25rem;
+}
+
+/* na xs i s trzeba osobne rozwiazanie*/
+.credits {
+  display: grid;
+  grid-template-columns: auto repeat(3, 100%) auto;
+  position: relative;
+}
+.credits-div-1 {
+  position: absolute;
+}
+@media (min-width: 768px) {
+  .credits-div-1 {
+    grid-column: 1;
+    top: 0;
+    left: 4rem;
+  }
+  .credits-div-2 {
+    grid-column: 3;
+  }
+  .credits-div-3 {
+    grid-column: 4;
+  }
+}
+@media (max-width: 768px) {
+  /* do zrobienia */
+  .developed-by {
+    background-color: purple;
+  }
+  .credits-text {
+    font-size: 0.75rem;
+  }
+  .credits {
+    grid-template-columns: auto repeat(3, 100%) auto;
+  }
+  .credits-div-1 {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.75rem;
+  }
+  .credits-div-2 {
+    margin-top: 0.5rem;
+    margin-left: 0.75rem;
+  }
+  .credits-div-3 {
+    margin: 0.25rem 0.75rem 0.25rem 0;
+    text-align: right;
+  }
+  .credits {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+/* @media (min-width: 576px) {
+  .credits {
+    grid-template-columns: auto repeat(3, 180px) auto;
+  }
+} */
+@media (min-width: 768px) {
+  .credits {
+    grid-template-columns: auto repeat(3, 240px) auto;
+    padding: 0.5rem;
+  }
+  .credits-div-1 {
+    top: 0.5rem;
+  }
+  .credits-text {
+    margin-left: 0.25rem;
+    margin-right: 0rem;
+    line-height: 125%;
+  }
+}
+@media (min-width: 992px) {
+  .credits {
+    grid-template-columns: auto repeat(3, 320px) auto;
+  }
+}
+@media (min-width: 1200px) {
+  .credits {
+    grid-template-columns: auto repeat(3, 380px) auto;
+  }
+}
+@media (max-width: 1400px) {
+}
+@media (min-width: 1400px) {
+  .credits {
+    grid-template-columns: auto repeat(3, 440px) auto;
+  }
+}
+
+.footer-logo {
+  margin-bottom: 2rem;
+  width: 8.5rem;
+}
+@media (max-width: 768px) {
+  .footer-logo {
+    margin-bottom: 1.5rem;
+    width: 5rem;
+  }
+}
+
+.footer-header {
+  font: 700 1.75rem/2rem Inter, sans-serif;
+  color: #514c9a;
+}
+
+.footer-page-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: outside;
+  line-height: 2.25;
+}
+
+.footer-social-icons {
+  display: flex;
+}
+.footer-social-icons a {
+  margin-top: 2.5rem;
+  margin-right: 2rem;
+}
+.footer-social-icons img {
+  width: 3rem;
+}
+@media (max-width: 768px) {
+  .footer-social-icons a {
+    margin-top: 1rem;
+  }
+  .footer-social-icons a {
+    margin-right: 3rem;
+  }
+  .footer-social-icons img {
+    width: 2rem;
+  }
+}
+
+.footer-column {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-margin {
+    margin-left: 0.5rem;
+  }
+}
+
+.footer-email-wydzial {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .footer-email-wydzial {
+    flex-direction: column-reverse;
+  }
+}

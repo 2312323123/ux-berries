@@ -1,0 +1,137 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* bootstrap fix */
+dl,
+ol,
+ul {
+  margin-bottom: 0;
+}
+
+nav {
+  z-index: 1;
+  position: relative;
+}
+/* ------------- */
+
+@media (max-width: 790px) {
+  /* 768px) { */
+  /* 992? */
+  nav {
+    display: grid !important; /* bootstrap used to break it */
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    box-shadow: 0px 2px 0px #a6a3d1;
+  }
+  .nav-brand {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    align-self: center;
+  }
+  .nav-accordion {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    justify-self: end;
+    color: #444;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 300% !important;
+    border-radius: 30rem;
+  }
+  .nav-panel {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    margin: 0;
+
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    list-style-type: none;
+    text-align: center;
+    line-height: 200%;
+  }
+  .nav-panel-padding {
+    padding: 0.5rem 0 1rem;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    color: #514c9a;
+    font: normal 400 1.125rem "Nunito-Sans", sans-serif;
+    text-decoration: none;
+  }
+
+  /* .invisible {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  } */
+
+  .nav-accordion-active,
+  .nav-accordion:hover {
+    background-color: #ccc;
+  }
+
+  .nav-accordion {
+    padding: 0 2rem;
+  }
+  .nav-brand {
+    margin: 0.5rem 1.5rem;
+  }
+  .nav-accordion {
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 790px) {
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    box-shadow: 0px 2px 0px #a6a3d1;
+  }
+
+  .nav-brand {
+    flex-grow: 10;
+    place-self: center;
+  }
+
+  .nav-accordion {
+    display: none !important;
+  }
+
+  .nav-panel {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    padding: 1rem !important;
+    color: #514c9a;
+    font: normal 400 1.125rem "Nunito-Sans", sans-serif;
+    text-decoration: none;
+  }
+
+  .nav,
+  .nav-link,
+  .nav-brand {
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 1020px) {
+  .nav,
+  .nav-link,
+  .nav-brand {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}

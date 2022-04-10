@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="csux_hero.css">
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+  <link rel="stylesheet" href="../../kreska/kreska.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700">
+  
+</head>
+<body>
+  <!-- hero -->
+  <header class="w-100 csux_hero-tlo">
+    <div class="w-100 container csux_hero-inside">
+      <div class="row align-items-center csux-hero">
+        <div class="col-xl-8 col-lg-8 col-12">
+          <div class="col-9">
+            <div class="csux-hero-small-screen-margin">
+              <h2 class="csux-hero-text-small">CIEMNA STRONA UX #7</h2>
+              <h2 class="csux-hero-text-big">YOUR JOURNEY STARTS HERE!</h2>
+              <h2 class="csux-hero-text-small">KRAKOWSKI PARK TECHNOLOGICZNY</h2>
+              <br>
+              <h2 class="csux-hero-text-small">7 MAJA 2022</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 text-lg-center csux-hero-small-screen-margin">
+          <button class="csux-hero-button">Zapisz się!</button>
+        </div>
+      </div>
+    </div>
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob3"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob4"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob5"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+  
+      <script defer>
+        const animate1 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob3' },
+          { path: '#blob4' },
+          { duration: 15000 }
+        );
+        const animate2 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob4' },
+          { path: '#blob5' },
+          { duration: 15000 }
+        );
+        const animate3 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob5' },
+          { path: '#blob3' },
+          { duration: 15000 }
+        );
+  
+        animate1.chain(animate2);
+        animate2.chain(animate3);
+        animate3.chain(animate1);
+        animate1.start();
+      </script>
+    </div>
+  </header>
+  <!-- -->
+</body>
+</html>
