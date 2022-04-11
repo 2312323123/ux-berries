@@ -1,3 +1,143 @@
+body {
+  /* background-color: #666; */
+}
+
+.tba {
+  display: grid;
+  grid-template-columns: 20px 180px auto;
+  /* grid-template-columns: 100px 100px auto; */
+  grid-template-rows: repeat(10, auto);
+  margin: 0 auto;
+
+  counter-reset: berries;
+}
+
+.side-content {
+  margin-left: -9rem;
+}
+
+@media (max-width: 992px) {
+  .tba {
+    grid-template-columns: 50px 154px auto;
+  }
+  .side-content {
+    margin-left: -9rem;
+  }
+}
+
+.agenda-time {
+  margin-top: 1rem;
+  font: 700 1.5rem/1rem Inter, sans-serif;
+}
+
+.agenda-title {
+  font: 1.125rem/150% "Nunito Sans", sans-serif;
+}
+
+.agenda-author {
+  font: 1.125rem/0px "Nunito Sans", sans-serif;
+}
+
+.agenda-description {
+  width: 110%;
+}
+@media (min-width: 992px) {
+  .agenda-description {
+    width: 130%;
+  }
+}
+
+.tba-margin {
+  margin-top: 2rem;
+}
+
+.tba-background-images {
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .tba-planet,
+  .tba-cloud-1,
+  .tba-cloud-2 {
+    display: none;
+  }
+}
+.tba-planet {
+  position: absolute;
+  transform: scale(60%);
+  top: -10%;
+  left: -55%;
+  z-index: -1;
+}
+.tba-cloud-1 {
+  position: absolute;
+  transform: scale(40%);
+  left: 55%;
+  top: 50%;
+  z-index: -1;
+}
+.tba-cloud-2 {
+  position: absolute;
+  transform: scale(40%);
+  top: 70%;
+  left: -55%;
+  z-index: -1;
+}
+@media (min-width: 1600px) {
+  .tba-planet {
+    left: -65%;
+  }
+  .tba-cloud-1 {
+    left: 65%;
+  }
+  .tba-cloud-2 {
+    left: -60%;
+  }
+}
+
+.berry {
+  justify-self: center;
+  counter-increment: berries;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: counter(berries);
+  grid-row-end: counter(berries);
+  background-color: transparent;
+  width: 34px;
+  margin-left: -13.3rem;
+  /* calc(
+    40% - 20px + 1000% - 20px - 20px - 20px - 20px - 20px - 200px - 4px
+  ); */
+  z-index: 2;
+}
+.leaves {
+  /* listki */
+  background-image: url("./images/listki.svg");
+  background-repeat: repeat-y;
+  background-position: center top;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: span 10;
+}
+.line {
+  /* linia */
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid #7eb256;
+  height: 100%;
+  width: 0;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: span 10;
+}
+.b1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
 .mainpage-header {
   font-family: Inter;
   font-weight: 700;
@@ -14,7 +154,6 @@
   border-top: 4px solid #7eb256;
   border-radius: 1em;
 }
-
 .mainpage-header-centered {
   font-family: Inter;
   font-weight: 700;
@@ -32,18 +171,15 @@
   text-align: center;
   margin: 0 auto;
 }
-
 @media (max-width: 768px) {
   .mainpage-header {
     font-size: 1.75rem;
   }
 }
-
 .mainpage-paragraph {
   line-height: 170%;
   margin-top: 1rem;
 }
-
 .grid-caption-konferencja-1 {
   font: 700 1.75rem/2rem Inter, sans-serif;
   background-color: black;
@@ -53,7 +189,6 @@
 .grid-caption-konferencja-2 {
   font: 700 1.75rem/2rem Inter, sans-serif;
 }
-
 .grid-chmurka-1 {
   position: absolute;
   top: 0;
@@ -67,7 +202,6 @@
   left: 0;
   width: 50%;
 }
-
 .image-svg {
   /* height: 401px;
   width: 581px; */
@@ -75,7 +209,6 @@
   margin-right: 20rem;
   aspect-ratio: 581/401;
 }
-
 /* 1 image 2 text grid */
 @media (max-width: 992px) {
   .mainpage-1-image-2-text-grid {
@@ -88,14 +221,12 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-
   .grid-caption-konferencja-1,
   .grid-caption-konferencja-2 {
     font: normal 700 1.125rem/1.5rem "Nunito Sans", sans-serif;
     margin-top: 2rem;
     margin-bottom: -0.5rem;
   }
-
   .grid-image-konferencja-field {
     height: max-content;
     position: relative;
@@ -122,7 +253,6 @@
   .grid-caption {
     font: normal 700 1.125rem/1.5rem "Nunito Sans", sans-serif;
   }
-
   .grid-image-konferencja-field {
     height: max-content;
     position: relative;
@@ -133,7 +263,6 @@
     width: 90%;
   }
 }
-
 /* header margin */
 @media (max-width: 992px) {
   .mainpage-header {
@@ -145,7 +274,6 @@
     margin: 3rem 0;
   }
 }
-
 .partnerzy-sponsorzy {
   display: flex;
   flex-wrap: wrap;
