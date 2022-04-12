@@ -1,0 +1,87 @@
+.test {
+    border: 1px solid #4923B5;
+    border-radius: 45px;
+    padding: 3rem 2.5rem;
+    /* display: inline-block; */
+
+    /* background-color:blueviolet; */
+    width: 80%;
+    margin-left: auto;
+}
+
+.padlock {
+    margin-top: -1.5rem;
+    /* transform: scale(1.1); */
+    /* width: 6.5rem; */
+    /* background-color: green; */
+}
+
+.padlock-text {
+    padding-left: 1rem;
+}
+
+.kontakt-mainpage-regular-font {
+    font: 1.5rem/2.25rem "Nunito Sans", sans-serif;
+    /* background-color: greenyellow; */
+}
+
+.kontakt-button {
+    color: white;
+    font: 600 1rem Inter, sans-serif;
+    letter-spacing: 0.02rem;
+    background-color: #AAAAAC;
+    border-radius: 30rem;
+    border: none;
+    padding: 1rem 2.5rem;
+    margin-top: 1rem;
+}
+
+
+.hero-button {
+    color: white;
+    font: 600 1.125rem Inter, sans-serif;
+    background-color: #4923b5;
+    padding: 1rem 2.5rem;
+    border-radius: 30rem;
+    border-color: transparent;
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background-color: pink;
+    transition: 0.2s;
+}
+
+.envelope-text {
+    font: 1.125rem "Nunito Sans", sans-serif;
+    margin-top: 1.25rem;
+    margin-bottom: 3.75rem;
+}
+.envelope {
+    margin-right: 1.25rem;
+}
+  
+  /* @media (max-width: 992px) {
+    .hero-button {
+      font: 600 1rem Inter, sans-serif;
+      padding: 0.75rem 2rem;
+      transition: 0.1s;
+    }
+  
+    .hero-button:hover {
+      transition: 0.1s;
+    }
+  } */
+  
+  /* przejsciowy rozmiar */
+  /* @media (min-width: 992px) and (max-width: 1200px) {
+    .hero-button {
+      font: 600 1rem Inter, sans-serif;
+      padding: 0.75rem 2rem;
+      transition: 0.15s;
+    }
+  
+    .hero-button:hover {
+      transition: 0.15s;
+    }
+  } */
