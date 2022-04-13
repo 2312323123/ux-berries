@@ -1,5 +1,9 @@
 /* credit to https://app.haikei.app/ */
 
+.svg-div {
+  z-index: 0;
+}
+
 body {
   font-size: 100%;
   overflow-x: hidden;

@@ -104,7 +104,7 @@ body {
   grid-row-end: counter(berries);
   background-color: transparent;
   width: 34px;
-  margin-left: -13.3rem;
+  margin-left: -13.125rem;
   /* calc(
     40% - 20px + 1000% - 20px - 20px - 20px - 20px - 20px - 200px - 4px
   ); */

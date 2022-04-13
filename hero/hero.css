@@ -3,7 +3,7 @@
   /* background: linear-gradient(#e66465, #9198e5); */
 
   /* zeby kreska dzialala */
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
   position: relative;
 }
 
@@ -52,23 +52,23 @@
   padding: 1rem 2.5rem;
   border-radius: 30rem;
   border-color: transparent;
-  transition: 0.2s;
+  transition: all 0.2s ease-out;
 }
 
 .hero-button:hover {
-  background-color: pink;
-  transition: 0.2s;
+  background-color: #7a75b5;
+  transition: all 0.2s ease-out;
 }
 
 @media (max-width: 992px) {
   .hero-button {
     font: 600 1rem Inter, sans-serif;
     padding: 0.75rem 2rem;
-    transition: 0.1s;
+    transition: all 0.1s ease-out;
   }
 
   .hero-button:hover {
-    transition: 0.1s;
+    transition: all 0.1s ease-out;
   }
 }
 

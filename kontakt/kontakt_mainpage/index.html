@@ -29,10 +29,16 @@
                 <p class="kontakt-mainpage-regular-font">
                     Znajdziesz nas również tu, śmiało zaglądaj!
                 </p>
-                <div class="row">
-                    <img src="./images/facebook.svg">
-                    <img src="./images/linkedin.svg">
-                    <img src="./images/Instagram.svg">
+                <div class="row pt-4">
+                    <div class="col-3">
+                        <img src="./images/facebook.svg">
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/linkedin.svg">
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/Instagram.svg">
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
@@ -50,6 +56,41 @@
             </div>
         </div>
         <h2 class="mainpage-header">FAQ</h2>
+
+        <div class="custom-accordion">
+            <button class="custom-accordion-button">W jakiej sprawie mogę do was dołączyć?</button>
+            <div class="panel">
+                <p class="custom-accordion-text">
+                    Nie ma złych pytań! Interesuje Cię współpraca z UXberries? 
+                    Chcesz zasilić szeregi naszych członków? 
+                    Zaciekawiło Cię coś w projektach, które przygotowaliśmy, 
+                    i pragniesz dowiedzieć się więcej? A może podzielasz naszą pasję do 
+                    UX/UI i chcesz się pochwalić swoim wspaniałym pomysłem projektowym? 
+                    Służymy radą i pomocą! Na te i wszelkie inne pytania, które przyjdą 
+                    Ci do głowy, odpowiemy z wielką radością.
+                <p>
+            </div>
+        </div>
+        <!-- <div>
+            hello there 3
+        </div> -->
+        <script defer>
+            var acc = document.getElementsByClassName("custom-accordion-button");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                // var panel = this.nextElementSibling;
+                let panel = this.nextElementSibling
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+              });
+            }
+        </script>
 
     </section>
 </body>

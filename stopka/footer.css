@@ -23,6 +23,11 @@
   margin-right: 0.25rem;
 }
 
+.footer-text {
+  font: 1.124rem/1.75rem 'Nunito-Sans', sans-serif;
+  color: black;
+}
+
 /* na xs i s trzeba osobne rozwiazanie*/
 .credits {
   display: grid;
@@ -132,6 +137,13 @@
   list-style-type: none;
   list-style-position: outside;
   line-height: 2.25;
+}
+.footer-page-list a {
+  text-decoration-line: none;
+}
+.footer-page-list a:hover {
+  text-decoration-line: underline;
+  color: black;
 }
 
 .footer-social-icons {

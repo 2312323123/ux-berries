@@ -1,67 +1,66 @@
 .test {
-    border: 1px solid #4923B5;
-    border-radius: 45px;
-    padding: 3rem 2.5rem;
-    /* display: inline-block; */
+  border: 1px solid #4923b5;
+  border-radius: 45px;
+  padding: 3rem 2.5rem;
+  /* display: inline-block; */
 
-    /* background-color:blueviolet; */
-    width: 80%;
-    margin-left: auto;
+  /* background-color:blueviolet; */
+  width: 80%;
+  margin-left: auto;
 }
 
 .padlock {
-    margin-top: -1.5rem;
-    /* transform: scale(1.1); */
-    /* width: 6.5rem; */
-    /* background-color: green; */
+  margin-top: -1.5rem;
+  /* transform: scale(1.1); */
+  /* width: 6.5rem; */
+  /* background-color: green; */
 }
 
 .padlock-text {
-    padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 .kontakt-mainpage-regular-font {
-    font: 1.5rem/2.25rem "Nunito Sans", sans-serif;
-    /* background-color: greenyellow; */
+  font: 1.5rem/2.25rem "Nunito Sans", sans-serif;
+  /* background-color: greenyellow; */
 }
 
 .kontakt-button {
-    color: white;
-    font: 600 1rem Inter, sans-serif;
-    letter-spacing: 0.02rem;
-    background-color: #AAAAAC;
-    border-radius: 30rem;
-    border: none;
-    padding: 1rem 2.5rem;
-    margin-top: 1rem;
+  color: white;
+  font: 600 1rem Inter, sans-serif;
+  letter-spacing: 0.02rem;
+  background-color: #aaaaac;
+  border-radius: 30rem;
+  border: none;
+  padding: 1rem 2.5rem;
+  margin-top: 1rem;
 }
 
-
 .hero-button {
-    color: white;
-    font: 600 1.125rem Inter, sans-serif;
-    background-color: #4923b5;
-    padding: 1rem 2.5rem;
-    border-radius: 30rem;
-    border-color: transparent;
-    transition: 0.2s;
+  color: white;
+  font: 600 1.125rem Inter, sans-serif;
+  background-color: #4923b5;
+  padding: 1rem 2.5rem;
+  border-radius: 30rem;
+  border-color: transparent;
+  transition: 0.2s;
 }
 
 .hero-button:hover {
-    background-color: pink;
-    transition: 0.2s;
+  background-color: pink;
+  transition: 0.2s;
 }
 
 .envelope-text {
-    font: 1.125rem "Nunito Sans", sans-serif;
-    margin-top: 1.25rem;
-    margin-bottom: 3.75rem;
+  font: 1.125rem "Nunito Sans", sans-serif;
+  margin-top: 1.25rem;
+  margin-bottom: 3.75rem;
 }
 .envelope {
-    margin-right: 1.25rem;
+  margin-right: 1.25rem;
 }
-  
-  /* @media (max-width: 992px) {
+
+/* @media (max-width: 992px) {
     .hero-button {
       font: 600 1rem Inter, sans-serif;
       padding: 0.75rem 2rem;
@@ -72,9 +71,9 @@
       transition: 0.1s;
     }
   } */
-  
-  /* przejsciowy rozmiar */
-  /* @media (min-width: 992px) and (max-width: 1200px) {
+
+/* przejsciowy rozmiar */
+/* @media (min-width: 992px) and (max-width: 1200px) {
     .hero-button {
       font: 600 1rem Inter, sans-serif;
       padding: 0.75rem 2rem;
@@ -85,3 +84,81 @@
       transition: 0.15s;
     }
   } */
+
+.custom-accordion {
+  /* purple 25% card bg */
+  background: #f8f7fc;
+
+  /* purple 60% card border */
+  border: 1.5px solid #afacd3;
+  border-radius: 1.5rem;
+
+  overflow: hidden;
+}
+.panel {
+  max-height: 0px;
+  transition: all 0.15s ease-in;
+
+  box-sizing: border-box;
+}
+.custom-accordion-button {
+  padding: 1.5rem 2rem;
+  text-align: left;
+  font: 700 2rem/2.5rem Inter, sans-serif;
+  background: #f8f7fc;
+  color: #514c9a;
+  width: 100%;
+  border: none;
+  transition: all 0.2s ease-in;
+  border-radius: 1.5rem;
+
+  /* arrow */
+  position: relative;
+}
+.custom-accordion-button:hover {
+  background: pink;
+  transition: all 0.2s ease-in;
+}
+.custom-accordion-text {
+  padding: 0.5rem 6rem 0.5rem 1.5rem;
+}
+
+.custom-accordion-button:after {
+  position: absolute;
+  top: calc(50% - 1rem);
+  right: 2rem;
+  content: "";
+  background: url("./images/accordion_arrow.svg") no-repeat center;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  transition: all 0.2s ease-out;
+}
+.custom-accordion-button.active:after {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-out;
+}
+
+/* .custom-accordion-button:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: red
+    url("http://www.gentleface.com/i/free_toolbar_icons_16x16_black.png")
+    no-repeat -30px -50px fixed;
+  top: 10px;
+  right: 5px;
+  position: absolute;
+  display: inline-block;
+} */
+
+/* .custom-accordion-button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: red;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  display: inline-block;
+} */
