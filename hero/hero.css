@@ -1,5 +1,6 @@
 .hero-tlo {
   background-color: #e4def4;
+  background: linear-gradient(180deg, #d0beff 0%, #eae4f9 100%);
   /* background: linear-gradient(#e66465, #9198e5); */
 
   /* zeby kreska dzialala */

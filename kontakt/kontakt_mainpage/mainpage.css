@@ -2,22 +2,18 @@
   border: 1px solid #4923b5;
   border-radius: 45px;
   padding: 3rem 2.5rem;
-  /* display: inline-block; */
-
-  /* background-color:blueviolet; */
-  width: 80%;
-  margin-left: auto;
 }
 
 .padlock {
   margin-top: -1.5rem;
+  width: 6.5em;
   /* transform: scale(1.1); */
   /* width: 6.5rem; */
   /* background-color: green; */
 }
 
 .padlock-text {
-  padding-left: 1rem;
+  margin-left: 2rem;
 }
 
 .kontakt-mainpage-regular-font {
@@ -60,31 +56,6 @@
   margin-right: 1.25rem;
 }
 
-/* @media (max-width: 992px) {
-    .hero-button {
-      font: 600 1rem Inter, sans-serif;
-      padding: 0.75rem 2rem;
-      transition: 0.1s;
-    }
-  
-    .hero-button:hover {
-      transition: 0.1s;
-    }
-  } */
-
-/* przejsciowy rozmiar */
-/* @media (min-width: 992px) and (max-width: 1200px) {
-    .hero-button {
-      font: 600 1rem Inter, sans-serif;
-      padding: 0.75rem 2rem;
-      transition: 0.15s;
-    }
-  
-    .hero-button:hover {
-      transition: 0.15s;
-    }
-  } */
-
 .custom-accordion {
   /* purple 25% card bg */
   background: #f8f7fc;
@@ -123,6 +94,7 @@
 }
 .custom-accordion-text {
   padding: 0.5rem 6rem 0.5rem 1.5rem;
+  font: 1.125rem/1.75rem "Nunito Sans", sans-serif;
 }
 
 .custom-accordion-button:after {
@@ -141,30 +113,67 @@
   transition: all 0.2s ease-out;
 }
 
-/* .custom-accordion-button:after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background: red
-    url("http://www.gentleface.com/i/free_toolbar_icons_16x16_black.png")
-    no-repeat -30px -50px fixed;
-  top: 10px;
-  right: 5px;
-  position: absolute;
-  display: inline-block;
-} */
-
-/* .custom-accordion-button::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background: red;
-  top: 0px;
-  right: 0px;
-  position: absolute;
-  display: inline-block;
-} */
-
 .kontakt-mapa {
   width: 100%;
+}
+
+.padlock-row {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .kontakt-mainpage-regular-font {
+    font: 1rem/1.25rem "Nunito Sans", sans-serif;
+    /* background-color: greenyellow; */
+  }
+
+  .custom-accordion-button {
+    font: 700 1.25rem/1.5rem 'Nunito Sans', sans-serif;
+  }
+
+  .custom-accordion-text {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    font: 1rem/1.25rem "Nunito Sans", sans-serif;
+  }
+
+  .test {
+    width: 100%;
+    padding: 1.5rem 0 2.5rem 0;
+  }
+
+  .padlock {
+    display: inline-block;
+    width: 15ch;
+    margin: 0 auto;
+  }
+
+  .padlock-text {
+    margin: 1rem auto;
+  }
+
+  .padlock-row {
+    flex-direction: column;
+  }
+
+  .small-right {
+    text-align: right;
+  }
+  .small-right-img {
+    padding-right: 0.5rem;
+  }
+
+  .small-center {
+    text-align: center;
+  }
+  .small-center-img {
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .test {
+    /* background-color:blueviolet; */
+    width: 80%;
+    margin-left: auto;
+  }
 }

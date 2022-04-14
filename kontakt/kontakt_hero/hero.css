@@ -1,0 +1,81 @@
+.img {
+  float: right;
+  shape-outside: polygon(
+    21px 131px,
+    2px 57.18%,
+    12.39% 75.26%,
+    12.4% 350px,
+    2.57% 101.23%,
+    52.54% 101.38%,
+    52.6% 11.01%
+  );
+  margin-left: 1rem;
+  position: relative;
+  z-index: 1;
+  width: 60ch;
+}
+.kontakt-hero-header {
+  margin-bottom: 0.5em;
+  font: 700 4rem/5rem Inter, sans-serif;
+  color: #514c9a;
+}
+.kontakt-hero-text {
+  font: 1.5rem/150% "Nunito Sans", sans-serif;
+}
+.kontakt-hero {
+  padding-bottom: 8rem;
+  padding-top: 4rem;
+  margin-bottom: 4rem;
+}
+.kontakt-header {
+  background-color: #e4def4;
+  background: linear-gradient(180deg, #d0beff 0%, #eae4f9 100%);
+  position: relative;
+}
+body {
+  /* background-color: black; */
+}
+@media (max-width: 768px) {
+  .kontakt-hero-header {
+    font: 700 2.25rem/2.375rem Inter, sans-serif;
+  }
+  .kontakt-hero-text {
+    font: 1rem/125% "Nunito Sans", sans-serif;
+  }
+  .img {
+    float: right;
+    shape-outside: polygon(
+      47px 4px,
+      18px 17.07%,
+      15.84% 27.9%,
+      46.19% 85px,
+      37.05% 88%,
+      93.23% 87.3%,
+      85.70% 1.62%
+    );
+    margin-left: 2rem;
+    position: relative;
+    z-index: 1;
+    width: 30%;
+    /* background-color: #514c9a; */
+  }
+  .kontakt-hero {
+    padding-bottom: 6rem;
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .img {
+    shape-outside: polygon(
+      56px 162px,
+      21px 62.15%,
+      12.64% 79.19%,
+      12.4% 350px,
+      8.26% 101.49%,
+      52.54% 101.38%,
+      52.60% 35.37%
+    );
+    margin-top: 5em;
+    width: 45ch;
+  }
+}

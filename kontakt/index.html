@@ -1,14 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700|Nunito+Sans:400,700">
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+  <link rel="stylesheet" href="./kontakt_hero/hero.css">
+  <link rel="stylesheet" href="./kontakt_mainpage/mainpage.css">
+  <link rel="stylesheet" href="../kreska/kreska.css">
+  <link rel="stylesheet" href="../mainpage/mainpage.css">
+  <link rel="stylesheet" href="../new_navbar/navbar.css">
+  <link rel="stylesheet" href="../stopka/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 </head>
 <body>
+  <!-- nav -->
+  <nav class="nav">
+    <a href="../index.html" class="nav-brand">
+      <img src="../new_navbar/nav_logo.svg">
+    </a>
+    <i style="background: bluee;" class="nav-accordion material-icons-outlined">menu</i>
+    <ul class="nav-panel">
+      <li>
+        <a class="nav-link" href="#">O kole</a>
+      </li>
+      <li>
+        <a class="nav-link" href="../csux/csux.html">CSUX</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Współpraca</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Dołącz do nas</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+
+  <script defer>
+    let acc = document.getElementsByClassName("nav-accordion");
+    let i;
     
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        let list = this.nextElementSibling;
+        this.classList.toggle("nav-accordion-active");
+
+        if(list.classList.contains("nav-panel-padding")) {
+          setTimeout(() => list.classList.toggle("nav-panel-padding"), 190);
+        } else {
+          list.classList.toggle("nav-panel-padding");
+        }
+        
+        let panel = list;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+  <!-- /nav -->
+
+  <!-- hero -->
+  <header class="kontakt-header">
+    <div class="container kontakt-hero">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./kontakt_hero/images/social_expert.svg">
+        <img class="img" src="./kontakt_hero/images/social_expert_small.svg" alt="IfItDoesntMatchAnyMedia">
+      </picture>
+    
+      <h1 class="kontakt-hero-header">Napisz do nas</h1>
+      <p class="kontakt-hero-text">
+        Interesuje Cię UX/UI Design?<br>
+        Szukasz informacji o rekrutacji?</br>
+        Nie wahaj się odezwać, odpowiemy na wszystkie Twoje pytania!
+      </p>
+    </div>
+    
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob3"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob4"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob5"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+
+      <script defer>
+        const animate1 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob3' },
+          { path: '#blob4' },
+          { duration: 15000 }
+        );
+        const animate2 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob4' },
+          { path: '#blob5' },
+          { duration: 15000 }
+        );
+        const animate3 = KUTE.allFromTo(
+          '#blob3',
+          { path: '#blob5' },
+          { path: '#blob3' },
+          { duration: 15000 }
+        );
+
+        animate1.chain(animate2);
+        animate2.chain(animate3);
+        animate3.chain(animate1);
+        animate1.start();
+      </script>
+    </div>
+    <!-- /svg -->
+  </header>
+  <!-- /hero -->
+
+  <!-- main page -->
+  <section class="container">
+    <h2 class="mainpage-header">Kontakt</h2>
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <p class="envelope-text">
+          <img class="envelope" src="./kontakt_mainpage/images/envelope.svg">
+          itberries.wh.agh@gmail.com
+        </p>
+        <p class="kontakt-mainpage-regular-font">
+          Znajdziesz nas również tu, śmiało zaglądaj!
+        </p>
+        <div class="row pt-4">
+          <div class="col-4">
+            <img src="./kontakt_mainpage/images/facebook.svg">
+          </div>
+          <div class="col-4 small-center">
+            <img class="small-center-img" src="./kontakt_mainpage/images/linkedin.svg">
+          </div>
+          <div class="col-4 small-right">
+            <img class="small-right-img" src="./kontakt_mainpage/images/Instagram.svg">
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 mt-lg-0 col-12 col-lg-6">
+        <div class="test">
+          <div class="padlock-row">
+            <img class="padlock" src="./kontakt_mainpage/images/padlock.svg">
+            <br>
+            <p class="padlock-text kontakt-mainpage-regular-font">
+              status: zamknięta</br>kolejna edycja: X 2022
+            </p>
+          </div>
+          <div class="text-center">
+            <button class="kontakt-button">Dołącz do nas</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="mainpage-header">FAQ</h2>
+
+    <div class="custom-accordion">
+      <button class="custom-accordion-button">W jakiej sprawie mogę do was dołączyć?</button>
+      <div class="panel">
+        <p class="custom-accordion-text">
+          Nie ma złych pytań! Interesuje Cię współpraca z UXberries? 
+          Chcesz zasilić szeregi naszych członków? 
+          Zaciekawiło Cię coś w projektach, które przygotowaliśmy, 
+          i pragniesz dowiedzieć się więcej? A może podzielasz naszą pasję do 
+          UX/UI i chcesz się pochwalić swoim wspaniałym pomysłem projektowym? 
+          Służymy radą i pomocą! Na te i wszelkie inne pytania, które przyjdą 
+          Ci do głowy, odpowiemy z wielką radością.
+        <p>
+      </div>
+    </div>
+
+    <div class="custom-accordion">
+      <button class="custom-accordion-button">Jak mogę się stać członkiem koła?</button>
+      <div class="panel">
+        <p class="custom-accordion-text">
+          U góry strony znajdziesz informację o statusie rekrutacji. 
+          Jeżeli kłódka jest zamknięta - oznacza to, że obecnie nie przyjmujemy 
+          nowych osób i musisz poczekać do daty, która widnieje obok. Wtedy kłódka się otworzy, 
+          a wraz z nią nasze  formularze zgłoszeniowe! Jeżeli interesują Cię szczegóły, 
+          możesz także zerknąć do sekcji Dołącz do nas.
+        <p>
+      </div>
+    </div>
+
+    <div class="custom-accordion">
+      <button class="custom-accordion-button">Jak mogę nawiązać z wami współpracę?</button>
+      <div class="panel">
+        <p class="custom-accordion-text">
+          work in progress
+        <p>
+      </div>
+    </div>
+    
+    <script defer>
+      var acc_kontakt = document.getElementsByClassName("custom-accordion-button");
+      var i_kontakt;
+      
+      for (i_kontakt = 0; i_kontakt < acc_kontakt.length; i_kontakt++) {
+        acc_kontakt[i_kontakt].addEventListener("click", function() {
+          this.classList.toggle("active");
+          // var panel = this.nextElementSibling;
+          let panel = this.nextElementSibling
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+    
+    <h2 class="mainpage-header">Jak do nas trafić</h2>
+
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <p class="kontakt-mainpage-regular-font">
+          Wydział Humanistyczny AGH<br>
+          Antoniego Gramatyka 8A<br>
+          30-071 Kraków<br>
+        </p>
+        <br>
+        <p class="kontakt-mainpage-regular-font">
+          <img src="./kontakt_mainpage/images/globe.svg">
+          wh.agh.edu.pl
+        </p>
+        <p class="kontakt-mainpage-regular-font">
+          <img src="./kontakt_mainpage/images/location.svg">
+          lokalizacja
+        </p>
+      </div>
+      <div class="col-12 col-lg-6 mx-auto">
+        <img class="kontakt-mapa" src="./kontakt_mainpage/images/mapa.png">
+      </div>
+    </div>
+    <br><br><br>
+  </section>
+  <!-- /main page -->
+  
+  <!-- footer -->
+  <footer class="footer-background w-100">
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion-flipped"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob6"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob7"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob8"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+
+      <script defer>
+        const animate4 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob6' },
+          { path: '#blob7' },
+          { duration: 15000 }
+        );
+        const animate5 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob7' },
+          { path: '#blob8' },
+          { duration: 15000 }
+        );
+        const animate6 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob8' },
+          { path: '#blob6' },
+          { duration: 15000 }
+        );
+  
+        animate4.chain(animate5);
+        animate5.chain(animate6);
+        animate6.chain(animate4);
+        animate4.start();
+      </script>
+    </div>
+    <!-- /svg -->
+
+    <div class="container footer-margin">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 footer-column">
+          <img class="footer-logo" src="../stopka/footer_icons/logo_footer.svg">
+          <div class="footer-email-wydzial">
+            <p class="footer-text">itberries.wh.agh@gmail.com</p>
+            <p class="footer-text">Wydział Humanistyczny AGH<br>Antoniego Gramatyka 8A<br>30-071 Kraków</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 footer-column">
+          <h2 class="footer-header">Mapa strony</h2>
+          <ul class="footer-page-list">
+            <li><a class="footer-text" href="/">O kole</a></li>
+            <li><a class="footer-text" href="../csux/csux.html">CS UX</a></li>
+            <li><a class="footer-text" href="/">Współpraca</a></li>
+            <li><a class="footer-text" href="/">Dołącz do nas</a></li>
+            <li><a class="footer-text" href="/">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 footer-column">
+          <h2 class="footer-header">Znajdź nas!</h2>
+          <div class="footer-social-icons">
+            <a href="/"><img src="../stopka/footer_icons/facebook.svg"></a>
+            <a href="/"><img src="../stopka/footer_icons/linkedin.svg"></a>
+            <a href="/"><img src="../stopka/footer_icons/Instagram.svg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="credits">
+    <div class="credits-text credits-div-1">© UXberries <span id="year"></span></div>
+    <div class="credits-text credits-div-2">designed by: UXberries</div>
+    <div class="credits-div-3 d-flex flex-column flex-xxl-row">
+      <span class="credits-text">
+        developed by: 
+      </span>
+      <span class="credits-text">
+        Ireneusz Jasinowski<span class="xxl-przecinek">,</span>
+      </span>
+      <span class="credits-text">
+        Maciej Piotrowski
+      </span>
+    </div>
+  </div>
+  <script defer>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <!-- /footer -->
 </body>
 </html>
