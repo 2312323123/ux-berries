@@ -1,0 +1,125 @@
+/* --- nie udalo sie obejsc, nth-of-type: poprzedni+1, grid-row-start: poprzedni+2 --- */
+.wspolpraca-naprzemienny-grid-header:nth-of-type(1) {
+  grid-row-start: 1;
+}
+.wspolpraca-naprzemienny-grid-header:nth-of-type(2) {
+  grid-row-start: 3;
+}
+.wspolpraca-naprzemienny-grid-header:nth-of-type(3) {
+  grid-row-start: 5;
+}
+/* /--- */
+
+@media (max-width: 992px) {
+  .mainpage-header {
+    margin-top: 2ch;
+  }
+
+  .co-zyskasz::before {
+    content: "Co zyskasz?";
+  }
+
+  /* naprzemienny grid - maly ekran */
+  .wspolpraca-naprzemienny-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+
+  .wspolpraca-naprzemienny-grid-image {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+  }
+
+  .wspolpraca-naprzemienny-grid-header {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  .wspolpraca-naprzemienny-grid-paragraf {
+    grid-column-end: span 3;
+  }
+  /* /naprzemienny grid - maly ekran */
+
+  /* naprzemienny grid - maly ekran - pojedyncze elementy */
+  .wspolpraca-naprzemienny-grid-image {
+    /* background-color: blueviolet; */
+    padding-bottom: 0.5rem;
+    width: calc(60% + 1rem);
+    justify-self: right;
+    align-self: top;
+  }
+  .wspolpraca-naprzemienny-grid-header {
+    /* background-color: crimson; */
+    align-self: center;
+    font: 700 1rem/1.375rem "Nunito Sans", sans-serif;
+  }
+  .wspolpraca-naprzemienny-grid-paragraf {
+    /* background-color: chocolate; */
+    font: 0.875rem/1.25rem "Nunito Sans", sans-serif;
+    margin-bottom: 3em;
+  }
+  /* /naprzemienny grid - maly ekran - pojedyncze elementy */
+}
+
+@media (min-width: 992px) {
+  .mainpage-header {
+    margin-top: 5ch;
+  }
+
+  .co-zyskasz::before {
+    content: "Co zyskasz współpracując z nami?";
+  }
+
+  /* naprzemienny grid - duzy ekran */
+  .wspolpraca-naprzemienny-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+
+  .wspolpraca-naprzemienny-grid-image:nth-of-type(2n + 1) {
+    grid-column-start: 1;
+    padding-right: 3rem;
+  }
+  .wspolpraca-naprzemienny-grid-image:nth-of-type(2n) {
+    grid-column-start: 3;
+    padding-left: 3rem;
+  }
+
+  .wspolpraca-naprzemienny-grid-image {
+    grid-column-end: span 1;
+    grid-row-end: span 2; /* z jakiegos powodu 3 a nie 2 */
+  }
+
+  .wspolpraca-naprzemienny-grid-header:nth-of-type(2n + 1),
+  .wspolpraca-naprzemienny-grid-header:nth-of-type(2n + 1) {
+    grid-column-start: 2;
+  }
+  .wspolpraca-naprzemienny-grid-header:nth-of-type(2n),
+  .wspolpraca-naprzemienny-grid-header:nth-of-type(2n) {
+    grid-column-start: 1;
+  }
+
+  .wspolpraca-naprzemienny-grid-header,
+  .wspolpraca-naprzemienny-grid-paragraf {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+  }
+  /* /naprzemienny grid - duzy ekran */
+
+  /* naprzemienny grid - duzy ekran - pojedyncze elementy */
+  .wspolpraca-naprzemienny-grid-image {
+    padding-bottom: 3rem;
+    /* background-color: blueviolet; */
+    width: 100%;
+  }
+  .wspolpraca-naprzemienny-grid-header {
+    /* background-color: crimson; */
+    align-self: center;
+    font: 700 1.75rem/2.25rem Inter, sans-serif;
+  }
+  .wspolpraca-naprzemienny-grid-paragraf {
+    /* background-color: chocolate; */
+    font: 1.5rem/1.75rem "Nunito Sans", sans-serif;
+  }
+  /* /naprzemienny grid - duzy ekran - pojedyncze elementy */
+}
