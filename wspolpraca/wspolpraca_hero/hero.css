@@ -55,3 +55,22 @@
     padding-bottom: 4rem;
   }
 }
+/* nav padding */
+@media (max-width: 768px) {
+  .hero-tlo-wspolpraca {
+    /* cause nav bar */
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .hero-tlo-wspolpraca {
+    /* cause nav bar */
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .hero-tlo-wspolpraca {
+    /* cause nav bar */
+    margin-top: 2rem;
+  }
+}

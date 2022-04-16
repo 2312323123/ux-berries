@@ -26,6 +26,17 @@
   font: 700 1.125rem/150% "Nunito Sans", sans-serif;
   color: #4923b5;
 }
+
+/* small screens overflow prevention*/
+@media (max-width: 576px) {
+  .tab-header > div {
+    font-size: 3.5vw;
+  }
+  .tab-header > div.tab-active {
+    font-size: 3.5vw;
+  }
+}
+
 .tab-indicator {
   width: calc(100%/3);
   left: 0;

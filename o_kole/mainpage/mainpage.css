@@ -1,0 +1,218 @@
+.o-kole-mainpage-paragraph {
+  font: 1.5rem/2.25rem "Nunito Sans", sans-serif;
+  max-width: 75ch;
+}
+
+@media (max-width: 992px) {
+  .o-kole-zarzad-grid {
+    display: grid;
+    grid-template-columns: calc(30% + 1.5rem) auto;
+    grid-template-rows: repeat(3, auto);
+    justify-items: left;
+    column-gap: 1.5rem;
+    row-gap: 3rem;
+  }
+
+  .o-kole-zarzad-czlowiek-zdjecie:nth-of-type(1),
+  .o-kole-zarzad-czlowiek-info:nth-of-type(1) {
+    grid-row: 2 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-zdjecie:nth-of-type(2),
+  .o-kole-zarzad-czlowiek-info:nth-of-type(2) {
+    grid-row: 1 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-zdjecie:nth-of-type(3),
+  .o-kole-zarzad-czlowiek-info:nth-of-type(3) {
+    grid-row: 3 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-info:nth-of-type(1) {
+    grid-column: 2 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-info:nth-of-type(2) {
+    grid-column: 2 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-info:nth-of-type(3) {
+    grid-column: 2 / span 1;
+  }
+
+  .o-kole-zarzad-czlowiek-zdjecie {
+    align-self: end;
+    border-radius: 24px;
+    width: 100%;
+  }
+
+  .o-kole-zarzad-czlowiek-info {
+    align-self: center;
+    text-align: left;
+  }
+
+  .o-kole-zarzad-czlowiek-imie {
+    font: 700 1.125rem/1.5rem Inter, sans-serif;
+    color: #4923b5;
+  }
+
+  .o-kole-zarzad-czlowiek-stanowisko {
+    font: 0.875rem/140% "Nunito Sans", sans-serif;
+    color: #1d1d1b;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainpage-header {
+    margin-top: 4ch;
+    margin-bottom: 3ch;
+  }
+
+  .tab-o-kole-1::after {
+    content: "Projektowanie";
+  }
+  .tab-o-kole-2::after {
+    content: "Warsztaty";
+  }
+  .tab-o-kole-3::after {
+    content: "Audyty stron";
+  }
+}
+
+@media (min-width: 992px) {
+  .o-kole-zarzad-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    row-gap: 1.5rem;
+  }
+
+  .o-kole-zarzad-czlowiek-zdjecie:nth-of-type(1),
+  .o-kole-zarzad-czlowiek-info:nth-of-type(1) {
+    grid-column: 2 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-zdjecie:nth-of-type(2),
+  .o-kole-zarzad-czlowiek-info:nth-of-type(2) {
+    grid-column: 3 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-zdjecie:nth-of-type(3),
+  .o-kole-zarzad-czlowiek-info:nth-of-type(3) {
+    grid-column: 4 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-info:nth-of-type(1) {
+    grid-row: 2 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-info:nth-of-type(2) {
+    grid-row: 2 / span 1;
+  }
+  .o-kole-zarzad-czlowiek-info:nth-of-type(3) {
+    grid-row: 2 / span 1;
+  }
+
+  .o-kole-zarzad-czlowiek-zdjecie {
+    align-self: end;
+    border-radius: 24px;
+  }
+
+  .o-kole-zarzad-czlowiek-info {
+    align-self: start;
+    text-align: center;
+  }
+
+  .o-kole-zarzad-czlowiek-imie {
+    font: 700 1.5rem/1.75rem Inter, sans-serif;
+    color: #4923b5;
+  }
+
+  .o-kole-zarzad-czlowiek-stanowisko {
+    font: 1.125rem/150% "Nunito Sans", sans-serif;
+    color: #1d1d1b;
+  }
+}
+
+@media (min-width: 992px) {
+  .mainpage-header {
+    margin-top: 4ch;
+  }
+
+  .tab-o-kole-1::after {
+    content: "Projektowanie stron i aplikacji";
+  }
+  .tab-o-kole-2::after {
+    content: "Warsztaty i konferencja";
+  }
+  .tab-o-kole-3::after {
+    content: "Audyty stron";
+  }
+}
+
+@media (min-width: 992px) {
+  .mainpage-header {
+    margin-top: 4ch;
+  }
+
+  .tab-o-kole-1::after {
+    content: "Projektowanie stron i aplikacji";
+  }
+  .tab-o-kole-2::after {
+    content: "Warsztaty i konferencja";
+  }
+  .tab-o-kole-3::after {
+    content: "Audyty stron";
+  }
+}
+
+.o_kole-accordion-image {
+  width: 4rem;
+  margin-right: 5%;
+}
+.custom-accordion-button {
+  padding: 1rem 4rem 1rem 1rem !important;
+}
+@media (min-width: 992px) {
+  .o_kole-accordion-image {
+    width: 5rem;
+    margin-right: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .static-slideShow {
+    /* trzeba nadpisac flex */
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .slideShow {
+    /* trzeba nadpisac grid */
+    display: none !important;
+  }
+}
+
+.projekty-button {
+  color: #4923b5;
+  font: normal 600 1.125rem/1.25rem Inter, sans-serif;
+
+  border: 4px solid #4923b5;
+  background-color: white;
+  padding: 0.7rem 3rem;
+  border-radius: 30rem;
+
+  transition: all 0.2s ease-out;
+
+  margin: 2rem;
+}
+.projekty-button:hover {
+  border-color: #7a75b5;
+  color: #7a75b5;
+  transition: all 0.2s ease-out;
+}
+
+.projekty-button-container {
+  text-align: center;
+}
+
+.static-slideShow {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem 0.5rem;
+}

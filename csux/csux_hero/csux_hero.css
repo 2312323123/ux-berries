@@ -7,6 +7,25 @@ body {
   padding-bottom: 5rem;
 }
 
+@media (max-width: 768px) {
+  .csux_hero-tlo {
+    /* cause nav bar */
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .csux_hero-tlo {
+    /* cause nav bar */
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .csux_hero-tlo {
+    /* cause nav bar */
+    margin-top: 2rem;
+  }
+}
+
 .csux_hero-tlo {
   position: relative; /* wazne */
 }

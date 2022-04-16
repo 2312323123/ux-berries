@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+  <!-- headers -->
+  <link rel="stylesheet" href="../../mainpage/mainpage.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700|Nunito+Sans:400,700">
+  <link rel="stylesheet" href="./mainpage.css">
+  <!-- accordion -->
+  <link rel="stylesheet" href="../../kontakt/kontakt_mainpage/mainpage.css">
+  <!-- tabs -->
+  <link rel="stylesheet" href="../../wspolpraca/tabs/tabs.css">
+
+  <!-- slides -->
+  <link rel="stylesheet" href="../slides/slides.css">
+</head>
+<body>
+  <!-- mainpage -->
+  <section class="container">
+    <h2 class="mainpage-header">Kim jesteśmy?</h2>
+    <p class="o-kole-mainpage-paragraph">
+      <b>UXberries</b> to koło zrzeszające tych studentów AGH, którzy chcą pozostawić świat technologii 
+      bardziej <b>użytecznym</b> i <b>estetycznym</b>, niż go zastali.
+      <br><br>
+      Członkowie koła pod okiem ekspertów rozwijają swoje kompetencje związane z <b>user experience design</b>, <b>user interface design</b>, <b>projektowaniem graficznym</b>, a także uczestniczą w przygotowywaniu konferencji związanej z tematyką user experience.
+      <br><br>
+      Jesteśmy nastawieni na działanie <b>w praktyce</b> - pracujemy nad faktycznymi projektami, symulując pracę w branży projektanckiej i przechodząc przez wszystkie etapy metodologii <b>design thinking</b>. Co roku uczestnicy mogą zdobywać cenne <b>doświadczenia</b>, poszerzać swoje <b>projektanckie horyzonty</b> i rozbudowywać <b>portfolio</b>.
+    </p>
+
+    <h2 class="mainpage-header">Czym się zajmujemy?</h2>
+    <!-- tabs -->
+    <div class="tabs">
+      <div class="tab-header">
+        <div class="tab-indicator"></div>
+        <div class="tab-active tab-option tab-o-kole-1"><!-- set in CSS --></div>
+        <div class="tab-option tab-o-kole-2"><!-- set in CSS --></div>
+        <div class="tab-option tab-o-kole-3"><!-- set in CSS --></div>
+      </div>
+      <div class="tab-body">
+        <div class="tab-active">
+          <p class="tab-paragraph">
+            Nasz zespół skrupulatnie i rzetelnie podchodzi do prowadzenia badań
+            zarówno przed, w trakcie i po procesie projektowym. Przykładamy dużą
+            wagę do tego aby badania były przeprowadzane na najwyższym poziomie. 
+            <br><br>
+            Podczas padań kładziem nacisk zarówno na badania ilościowe jak i jakościowe.
+          </p>
+          <img class="tab-image" src="./images/Audyty.svg">
+        </div>
+        <div>
+          <h2>This is about section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vero odio voluptas inventore dolor voluptatibus nam, ipsam quos alias non repellendus dolorem itaque est dolores neque. Eveniet at dolores quae!</p>
+        </div>
+        <div>
+          <h2>This is services section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vero odio voluptas inventore dolor voluptatibus nam, ipsam quos alias non repellendus dolorem itaque est dolores neque. Eveniet at dolores quae!</p>
+        </div>
+      </div>
+    </div>
+  
+    <script defer>
+      let tabHeader = document.getElementsByClassName("tab-header")[0];
+      let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+      let tabBody = document.getElementsByClassName("tab-body")[0];
+  
+      let tabsPane = tabHeader.getElementsByClassName("tab-option");
+  
+      for(let i = 0; i < tabsPane.length; i++) {
+        tabsPane[i].addEventListener("click", function() {
+          tabHeader.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+          tabsPane[i].classList.add("tab-active");
+          tabBody.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+          tabBody.getElementsByTagName("div")[i].classList.add("tab-active");
+  
+          if(i != 0) {
+            tabBody.style.borderTopLeftRadius = "24px";
+          } else {
+            tabBody.style.borderTopLeftRadius = "0px";
+          }
+          if(i != 2) {
+            tabBody.style.borderTopRightRadius = "24px";
+          } else {
+            tabBody.style.borderTopRightRadius = "0px";
+          }
+  
+          tabIndicator.style.left = `calc(calc(100% / 3) * ${i})`;
+        });
+      }
+    </script>
+    <!-- /tabs -->
+
+    <h2 class="mainpage-header">Nasze projekty</h2>
+    <!-- accordion -->
+    <div class="custom-accordion">
+      <button class="custom-accordion-button"><img class="o_kole-accordion-image" src="./images/proj_2_logo.png"> AGH Racing</button>
+      <div class="panel">
+        <!-- slides content -->
+        <div class="container slideShow">
+          <a class="prev"><img src="./images/arrow_left.svg"> </a>
+          <a class="next"><img src="./images/arrow_right.svg"></a>
+          <!-- they could have caption and/or numbers -->
+          <div class="mySlides">
+            <!-- <div class="numbertext">1 / 6</div> -->
+            <img src="./images/galeria projektu 1.png">
+            <div class="numbertext">1 / 3</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="./images/galeria projektu 2.png">
+            <div class="numbertext">2 / 3</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="./images/galeria projektu 3.png">
+            <div class="numbertext">3 / 3</div>
+          </div>
+        </div>
+        <!-- /slides content -->
+        <p class="custom-accordion-text">
+          W ramach tego projektu nawiązana została współpraca z <b>AGH Racing</b> – kołem studenckim zajmującym się budową bolidów wyścigowych klasy Formuła Student. 
+          <br><br>
+          Głównym zadaniem siedmioosobowego zespołu projektowego był <b>redesign</b> istniejącej już strony internetowej koła, głównie w celu jej <b>optymalizacji</b> i zapewnienia lepszej reklamy organizacji.
+          <br><br>
+          W ramach procesu projektowego zaplanowano: wykonanie <b>audytu użyteczności</b> poprzedniej strony, stworzenie <b>benchmarków</b> konkurencji, wyszczególnienie kluczowych <b>funkcjonalności</b> 
+          oraz <b>potrzeb</b> użytkowników, stworzenie nowej <b>architektury informacji</b>, a także <b>makiet</b> low fidelity i high fidelity.
+        <p>
+        <div class="projekty-button-container">
+          <button class="projekty-button">link do strony</button>
+        </div>
+
+        <div class="static-slideShow">
+          <img src="./images/galeria projektu 1.png">
+          <img src="./images/galeria projektu 2.png">
+          <img src="./images/galeria projektu 3.png">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="custom-accordion">
+      <button class="custom-accordion-button">Jak mogę się stać członkiem koła?</button>
+      <div class="panel">
+        <p class="custom-accordion-text">
+          U góry strony znajdziesz informację o statusie rekrutacji. 
+          Jeżeli kłódka jest zamknięta - oznacza to, że obecnie nie przyjmujemy 
+          nowych osób i musisz poczekać do daty, która widnieje obok. Wtedy kłódka się otworzy, 
+          a wraz z nią nasze  formularze zgłoszeniowe! Jeżeli interesują Cię szczegóły, 
+          możesz także zerknąć do sekcji Dołącz do nas.
+        <p>
+      </div>
+    </div>
+
+    <div class="custom-accordion">
+      <button class="custom-accordion-button">Jak mogę nawiązać z wami współpracę?</button>
+      <div class="panel">
+        <p class="custom-accordion-text">
+          work in progress
+        <p>
+      </div>
+    </div>
+  
+    <script defer>
+      var acc_kontakt = document.getElementsByClassName("custom-accordion-button");
+      var i_kontakt;
+      
+      for (i_kontakt = 0; i_kontakt < acc_kontakt.length; i_kontakt++) {
+        acc_kontakt[i_kontakt].addEventListener("click", function() {
+          this.classList.toggle("active");
+          // var panel = this.nextElementSibling;
+          let panel = this.nextElementSibling
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    <!-- /accordion -->
+
+    <h2 class="mainpage-header">Zarząd</h2>
+    <!-- zarzad -->
+    <div class="o-kole-zarzad-grid">
+    <!-- <div class="o-kole-zarzad-grid" style="background:red;"> -->
+      <img class="o-kole-zarzad-czlowiek-zdjecie" src="./images/patryk.png">
+      <div class="o-kole-zarzad-czlowiek-info">
+        <h2 class="o-kole-zarzad-czlowiek-imie">Patryk Janczur</h2>
+        <p class="o-kole-zarzad-czlowiek-stanowisko">Zastępca prezesa</p>
+      </div>
+      <img class="o-kole-zarzad-czlowiek-zdjecie" src="./images/antoni.png">
+      <div class="o-kole-zarzad-czlowiek-info">
+        <h2 class="o-kole-zarzad-czlowiek-imie">Antoni Janas</h2>
+        <p class="o-kole-zarzad-czlowiek-stanowisko">Prezes<br>uxberries@gmail.eu</p>
+      </div>
+      <img class="o-kole-zarzad-czlowiek-zdjecie" src="./images/jan.png">
+      <div class="o-kole-zarzad-czlowiek-info">
+        <h2 class="o-kole-zarzad-czlowiek-imie">Jan Aleksandrowicz</h2>
+        <p class="o-kole-zarzad-czlowiek-stanowisko">Sekretarz</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- slides script -->
+  <script defer>
+    const slideIndexes = new Array(document.getElementsByClassName("slideShow").length).fill(0);
+    initializeSlides()
+    function initializeSlides() {
+      let elements = document.getElementsByClassName("prev")
+      for(let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("mouseup", () => {
+          prev(i)
+        })
+      }
+      elements = document.getElementsByClassName("next")
+      for(let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("mouseup", () => {
+          next(i)
+        })
+      }
+      
+
+      let length = document.getElementsByClassName("slideShow").length;
+      for(let i = 0; i < length; i++) {
+        console.log(i + " hehe " + length)
+        let slides = document.getElementsByClassName("slideShow")[i].getElementsByClassName("mySlides")
+        console.log(slides)
+        for(let j = 0; j < slides.length; j++) {
+          slides[j].style.display = "none";
+        }
+        slides[0].style.display = "block";
+      }
+    }
+    
+    function next(whichSlideshowStartingFrom0) {
+      showSlides(whichSlideshowStartingFrom0, 1);
+    }
+    
+    function prev(whichSlideshowStartingFrom0) {
+      showSlides(whichSlideshowStartingFrom0, -1);
+    }
+    
+    function currentSlide(whichSlideshowStartingFrom0) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n, step) {
+      let i;
+      let slides = document.getElementsByClassName("slideShow")[n].getElementsByClassName("mySlides");
+      let length = slides.length
+      if(n < 0 || n >= slideIndexes.length) {
+        console.log("42")
+      } else {
+        slideIndexes[n] += step
+        if(slideIndexes[n] < 0) {
+          slideIndexes[n] += length
+        }
+        if(slideIndexes[n] >=  length) {
+          slideIndexes[n] %= length
+        }
+        for (i = 0; i < length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndexes[n]].style.display = "block";
+      }
+    }
+  </script>
+  <!-- /slides script -->
+  <!-- /mainpage -->
+</body>
+</html>

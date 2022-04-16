@@ -1,0 +1,63 @@
+.hero-grafika-o-kole {
+  float: right;
+  width: 35%;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-tlo-o-kole {
+  background-color: #e4def4;
+  background: linear-gradient(180deg, #d0beff 0%, #eae4f9 100%);
+  /* kreska */
+  position: relative;
+  /* cause nav bar, was 2.5rem */
+  padding-top: 5rem;
+}
+
+.hero-wspolpraca-flow-root {
+  display: flow-root;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-o-kole-paragraph {
+  font: 1.5rem/150% "Nunito Sans", sans-serif;
+  padding-bottom: 4.5rem;
+}
+
+.hero-o-kole-highlight {
+  font-weight: 700;
+  color: white;
+  background-color: #514c9a;
+  padding: 0 0.2em;
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .hero-grafika-o-kole {
+    /* display: none; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .hero-o-kole-paragraph {
+    width: 70%;
+  }
+}
+/* < large */
+@media (max-width: 992px) {
+}
+/* small */
+@media (max-width: 768px) {
+  .hero-o-kole-paragraph {
+    font: 0.875rem/1.25rem "Nunito Sans", sans-serif;
+  }
+  .hero-grafika-o-kole {
+    max-height: 100%;
+    max-width: 20%;
+    /* position: absolute;
+    bottom: 0;
+    right: 0; */
+  }
+}

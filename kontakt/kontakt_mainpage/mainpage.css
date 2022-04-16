@@ -129,6 +129,7 @@
 
   .custom-accordion-button {
     font: 700 1.25rem/1.5rem 'Nunito Sans', sans-serif;
+    padding-right: 4rem;
   }
 
   .custom-accordion-text {

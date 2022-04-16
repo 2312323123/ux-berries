@@ -1,6 +1,13 @@
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   padding: 0;
   margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* bootstrap fix */
@@ -12,7 +19,9 @@ ul {
 
 nav {
   z-index: 1;
-  position: sticky;
+  /* position: sticky; */
+  position: fixed;
+  width: 100vw;
   top: 0;
   background-color: white;
   z-index: 3;
@@ -86,11 +95,11 @@ nav {
   .nav-accordion {
     padding: 0 2rem;
   }
+  .nav-accordion {
+    margin: 0.5rem 1.5rem 0.5rem 0.5rem;
+  }
   .nav-brand {
     margin: 0.5rem 1.5rem;
-  }
-  .nav-accordion {
-    margin: 0.5rem;
   }
 }
 

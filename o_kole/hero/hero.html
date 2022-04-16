@@ -4,38 +4,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hero</title>
+  <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="hero.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700">
+
+  <link rel="stylesheet" href="../../wspolpraca/wspolpraca_hero/hero.css">
 
   <!-- kreska -->
   <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
-  <link rel="stylesheet" href="../kreska/kreska.css">
+  <link rel="stylesheet" href="../../kreska/kreska.css">
   <!-- -->
+  <!-- kolejnosc ma znaczenie -->
+  <link rel="stylesheet" href="./hero.css">
+  <!-- / -->
+
+  <link rel="stylesheet" href="../../hero/hero.css">
 </head>
-<body>
+<body style="background:black;">
   <!-- hero -->
-  <header class="w-100 hero-tlo">
-    <div class="container align-items-center row hero-container">
-      <div class="col-lg-6 col-12">
-        <div class="col-md-9 col-12">
-          <div>
-            <h2 class="hero-text-big-1 hero-margin">Przejdź na</h2>
-            <h2 class="hero-text-big-2 hero-margin">ciemną stronę</h2>
-            <div class="w-100">
-              <p class="hero-margin">
-                Ciemna Strona UX to konferencja, gromadzi entuzjastów user experience, chcących dowiedzieć się więcej o mrocznej stronie UX.
-              </p>
-            </div>
-          </div>
-          <button class="hero-button hero-margin">Dowiedz się więcej!</button>
-        </div>
-      </div>
-      <div class="col-lg-6 text-center my-hero-text-right">
-        <img class="hero-grafika-margin" src="Frame 245.svg">
-      </div>
+  <header class="w-100 hero-tlo-o-kole">
+    <div class="container hero-wspolpraca-flow-root">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./images/o_kole_hero_svg.svg">
+        <img class="hero-grafika-o-kole" src="./images/o_kole_hero_svg_small.svg" alt="IfItDoesntMatchAnyMedia">
+      </picture>
+      <h2 class="hero-text-wspolpracuj">O kole</h2>
+      <p class="hero-o-kole-paragraph">UXberries to jedyne koło naukowe na Akademii Górniczo-Hutniczej, które zajmuje się tematyką
+        <span class="hero-o-kole-highlight">user experience!</span></p>
     </div>
     <!-- svg -->
     <div class="svg-div">

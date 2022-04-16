@@ -1,0 +1,47 @@
+.mySlides img {
+  width: 100%;
+}
+.mySlides {
+  width: 100%;
+  text-align: center;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+.slideShow {
+  display: grid;
+  grid-template-columns: auto 80% auto;
+  column-gap: 1%;
+  align-items: center;
+  justify-items: center;
+  padding: 0.5rem 0;
+}
+
+.prev,
+.next {
+  background-color: red;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 500%;
+  text-decoration-line: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-out;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.1s ease-out;
+}
+.prev > img,
+.next > img {
+  width: 100%;
+}

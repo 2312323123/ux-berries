@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./hero/hero.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700">
+
+  <!-- kreska -->
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+  <link rel="stylesheet" href="../kreska/kreska.css">
+  <!-- -->
+
+  <link rel="stylesheet" href="../hero/hero.css">
+
+  <!-- nav bar -->
+  <link rel="stylesheet" href="../new_navbar/navbar.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  
+  <!-- main page -->
+  <link rel="stylesheet" href="../mainpage/mainpage.css">
+  <link rel="stylesheet" href="./mainpage/mainpage.css">
+  <!-- main page accordion -->
+  <link rel="stylesheet" href="../kontakt/kontakt_mainpage/mainpage.css">
+  <!-- main page tabs -->
+  <link rel="stylesheet" href="../wspolpraca/tabs/tabs.css">
+  <!-- main page slideshow -->
+  <link rel="stylesheet" href="./slides/slides.css">
+
+  <!-- footer -->
+  <link rel="stylesheet" href="../stopka/footer.css">
+</head>
+<body>
+  <!-- nav -->
+  <nav class="nav">
+    <a href="../index.html" class="nav-brand">
+      <img src="../new_navbar/nav_logo.svg">
+    </a>
+    <i style="background: bluee;" class="nav-accordion material-icons-outlined">menu</i>
+    <ul class="nav-panel">
+      <li>
+        <a class="nav-link" href="#">O kole</a>
+      </li>
+      <li>
+        <a class="nav-link" href="../csux/csux.html">CSUX</a>
+      </li>
+      <li>
+        <a class="nav-link" href="../wspolpraca/index.html">Współpraca</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Dołącz do nas</a>
+      </li>
+      <li>
+        <a class="nav-link" href="../kontakt/index.html">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+
+  <script>
+    let acc = document.getElementsByClassName("nav-accordion");
+    let i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        let list = this.nextElementSibling;
+        this.classList.toggle("nav-accordion-active");
+
+        if(list.classList.contains("nav-panel-padding")) {
+          setTimeout(() => list.classList.toggle("nav-panel-padding"), 190);
+        } else {
+          list.classList.toggle("nav-panel-padding");
+        }
+        
+        let panel = list;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+  <!-- /nav -->
+
+  <!-- hero -->
+  <header class="w-100 hero-tlo-o-kole">
+    <div class="container hero-wspolpraca-flow-root">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./hero/images/o_kole_hero_svg.svg">
+        <img class="hero-grafika-o-kole" src="./hero/images/o_kole_hero_svg_small.svg" alt="IfItDoesntMatchAnyMedia">
+      </picture>
+      <h2 class="hero-text-wspolpracuj">O kole</h2>
+      <p class="hero-o-kole-paragraph">UXberries to jedyne koło naukowe na Akademii Górniczo-Hutniczej, które zajmuje się tematyką
+        <span class="hero-o-kole-highlight">user experience!</span></p>
+    </div>
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob3"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob4"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob5"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+    </div>
+  </header>
+
+  <script defer>
+    const animate1 = KUTE.allFromTo(
+      '#blob3',
+      { path: '#blob3' },
+      { path: '#blob4' },
+      { duration: 15000 }
+    );
+    const animate2 = KUTE.allFromTo(
+      '#blob3',
+      { path: '#blob4' },
+      { path: '#blob5' },
+      { duration: 15000 }
+    );
+    const animate3 = KUTE.allFromTo(
+      '#blob3',
+      { path: '#blob5' },
+      { path: '#blob3' },
+      { duration: 15000 }
+    );
+
+    animate1.chain(animate2);
+    animate2.chain(animate3);
+    animate3.chain(animate1);
+    animate1.start();
+  </script>
+  <!-- /svg -->
+  <!-- /hero -->
+  
+  <!-- mainpage -->
+  <section class="container">
+    <h2 class="mainpage-header">Kim jesteśmy?</h2>
+    <p class="o-kole-mainpage-paragraph">
+      <b>UXberries</b> to koło zrzeszające tych studentów AGH, którzy chcą pozostawić świat technologii 
+      bardziej <b>użytecznym</b> i <b>estetycznym</b>, niż go zastali.
+      <br><br>
+      Członkowie koła pod okiem ekspertów rozwijają swoje kompetencje związane z <b>user experience design</b>, <b>user interface design</b>, <b>projektowaniem graficznym</b>, a także uczestniczą w przygotowywaniu konferencji związanej z tematyką user experience.
+      <br><br>
+      Jesteśmy nastawieni na działanie <b>w praktyce</b> - pracujemy nad faktycznymi projektami, symulując pracę w branży projektanckiej i przechodząc przez wszystkie etapy metodologii <b>design thinking</b>. Co roku uczestnicy mogą zdobywać cenne <b>doświadczenia</b>, poszerzać swoje <b>projektanckie horyzonty</b> i rozbudowywać <b>portfolio</b>.
+    </p>
+
+    <h2 class="mainpage-header">Czym się zajmujemy?</h2>
+    <!-- tabs -->
+    <div class="tabs">
+      <div class="tab-header">
+        <div class="tab-indicator"></div>
+        <div class="tab-active tab-option tab-o-kole-1"><!-- set in CSS --></div>
+        <div class="tab-option tab-o-kole-2"><!-- set in CSS --></div>
+        <div class="tab-option tab-o-kole-3"><!-- set in CSS --></div>
+      </div>
+      <div class="tab-body">
+        <div class="tab-active">
+          <p class="tab-paragraph">
+            Nasz zespół skrupulatnie i rzetelnie podchodzi do prowadzenia badań
+            zarówno przed, w trakcie i po procesie projektowym. Przykładamy dużą
+            wagę do tego aby badania były przeprowadzane na najwyższym poziomie. 
+            <br><br>
+            Podczas padań kładziem nacisk zarówno na badania ilościowe jak i jakościowe.
+          </p>
+          <img class="tab-image" src="./mainpage/images/Audyty.svg">
+        </div>
+        <div>
+          <h2>This is about section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vero odio voluptas inventore dolor voluptatibus nam, ipsam quos alias non repellendus dolorem itaque est dolores neque. Eveniet at dolores quae!</p>
+        </div>
+        <div>
+          <h2>This is services section</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vero odio voluptas inventore dolor voluptatibus nam, ipsam quos alias non repellendus dolorem itaque est dolores neque. Eveniet at dolores quae!</p>
+        </div>
+      </div>
+    </div>
+  
+    <script defer>
+      let tabHeader = document.getElementsByClassName("tab-header")[0];
+      let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+      let tabBody = document.getElementsByClassName("tab-body")[0];
+  
+      let tabsPane = tabHeader.getElementsByClassName("tab-option");
+  
+      for(let i = 0; i < tabsPane.length; i++) {
+        tabsPane[i].addEventListener("click", function() {
+          tabHeader.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+          tabsPane[i].classList.add("tab-active");
+          tabBody.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+          tabBody.getElementsByTagName("div")[i].classList.add("tab-active");
+  
+          if(i != 0) {
+            tabBody.style.borderTopLeftRadius = "24px";
+          } else {
+            tabBody.style.borderTopLeftRadius = "0px";
+          }
+          if(i != 2) {
+            tabBody.style.borderTopRightRadius = "24px";
+          } else {
+            tabBody.style.borderTopRightRadius = "0px";
+          }
+  
+          tabIndicator.style.left = `calc(calc(100% / 3) * ${i})`;
+        });
+      }
+    </script>
+    <!-- /tabs -->
+
+    <h2 class="mainpage-header">Nasze projekty</h2>
+    <!-- accordion -->
+    <div class="custom-accordion">
+      <button class="custom-accordion-button"><img class="o_kole-accordion-image" src="./mainpage/images/proj_2_logo.png"> AGH Racing</button>
+      <div class="panel">
+        <!-- slides content -->
+        <div class="container slideShow">
+          <a class="prev"><img src="./mainpage/images/arrow_left.svg"> </a>
+          <a class="next"><img src="./mainpage/images/arrow_right.svg"></a>
+          <!-- they could have caption and/or numbers -->
+          <div class="mySlides">
+            <!-- <div class="numbertext">1 / 6</div> -->
+            <img src="./mainpage/images/galeria projektu 1.png">
+            <div class="numbertext">1 / 3</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="./mainpage/images/galeria projektu 2.png">
+            <div class="numbertext">2 / 3</div>
+          </div>
+
+          <div class="mySlides">
+            <img src="./mainpage/images/galeria projektu 3.png">
+            <div class="numbertext">3 / 3</div>
+          </div>
+        </div>
+        <!-- /slides content -->
+        <p class="custom-accordion-text">
+          W ramach tego projektu nawiązana została współpraca z <b>AGH Racing</b> – kołem studenckim zajmującym się budową bolidów wyścigowych klasy Formuła Student. 
+          <br><br>
+          Głównym zadaniem siedmioosobowego zespołu projektowego był <b>redesign</b> istniejącej już strony internetowej koła, głównie w celu jej <b>optymalizacji</b> i zapewnienia lepszej reklamy organizacji.
+          <br><br>
+          W ramach procesu projektowego zaplanowano: wykonanie <b>audytu użyteczności</b> poprzedniej strony, stworzenie <b>benchmarków</b> konkurencji, wyszczególnienie kluczowych <b>funkcjonalności</b> 
+          oraz <b>potrzeb</b> użytkowników, stworzenie nowej <b>architektury informacji</b>, a także <b>makiet</b> low fidelity i high fidelity.
+        <p>
+        <div class="projekty-button-container">
+          <button class="projekty-button">link do strony</button>
+        </div>
+
+        <div class="static-slideShow">
+          <img src="./mainpage/images/galeria projektu 1.png">
+          <img src="./mainpage/images/galeria projektu 2.png">
+          <img src="./mainpage/images/galeria projektu 3.png">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="custom-accordion">
+      <button class="custom-accordion-button">Jak mogę się stać członkiem koła?</button>
+      <div class="panel">
+        <p class="custom-accordion-text">
+          U góry strony znajdziesz informację o statusie rekrutacji. 
+          Jeżeli kłódka jest zamknięta - oznacza to, że obecnie nie przyjmujemy 
+          nowych osób i musisz poczekać do daty, która widnieje obok. Wtedy kłódka się otworzy, 
+          a wraz z nią nasze  formularze zgłoszeniowe! Jeżeli interesują Cię szczegóły, 
+          możesz także zerknąć do sekcji Dołącz do nas.
+        <p>
+      </div>
+    </div>
+
+    <div class="custom-accordion">
+      <button class="custom-accordion-button">Jak mogę nawiązać z wami współpracę?</button>
+      <div class="panel">
+        <p class="custom-accordion-text">
+          work in progress
+        <p>
+      </div>
+    </div>
+  
+    <script defer>
+      var acc_kontakt = document.getElementsByClassName("custom-accordion-button");
+      var i_kontakt;
+      
+      for (i_kontakt = 0; i_kontakt < acc_kontakt.length; i_kontakt++) {
+        acc_kontakt[i_kontakt].addEventListener("click", function() {
+          this.classList.toggle("active");
+          // var panel = this.nextElementSibling;
+          let panel = this.nextElementSibling
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    <!-- /accordion -->
+
+    <h2 class="mainpage-header">Zarząd</h2>
+    <!-- zarzad -->
+    <div class="o-kole-zarzad-grid">
+    <!-- <div class="o-kole-zarzad-grid" style="background:red;"> -->
+      <img class="o-kole-zarzad-czlowiek-zdjecie" src="./mainpage/images/patryk.png">
+      <div class="o-kole-zarzad-czlowiek-info">
+        <h2 class="o-kole-zarzad-czlowiek-imie">Patryk Janczur</h2>
+        <p class="o-kole-zarzad-czlowiek-stanowisko">Zastępca prezesa</p>
+      </div>
+      <img class="o-kole-zarzad-czlowiek-zdjecie" src="./mainpage/images/antoni.png">
+      <div class="o-kole-zarzad-czlowiek-info">
+        <h2 class="o-kole-zarzad-czlowiek-imie">Antoni Janas</h2>
+        <p class="o-kole-zarzad-czlowiek-stanowisko">Prezes<br>uxberries@gmail.eu</p>
+      </div>
+      <img class="o-kole-zarzad-czlowiek-zdjecie" src="./mainpage/images/jan.png">
+      <div class="o-kole-zarzad-czlowiek-info">
+        <h2 class="o-kole-zarzad-czlowiek-imie">Jan Aleksandrowicz</h2>
+        <p class="o-kole-zarzad-czlowiek-stanowisko">Sekretarz</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- slides script -->
+  <script defer>
+    const slideIndexes = new Array(document.getElementsByClassName("slideShow").length).fill(0);
+    initializeSlides()
+    function initializeSlides() {
+      let elements = document.getElementsByClassName("prev")
+      for(let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("mouseup", () => {
+          prev(i)
+        })
+      }
+      elements = document.getElementsByClassName("next")
+      for(let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("mouseup", () => {
+          next(i)
+        })
+      }
+      
+
+      let length = document.getElementsByClassName("slideShow").length;
+      for(let i = 0; i < length; i++) {
+        console.log(i + " hehe " + length)
+        let slides = document.getElementsByClassName("slideShow")[i].getElementsByClassName("mySlides")
+        console.log(slides)
+        for(let j = 0; j < slides.length; j++) {
+          slides[j].style.display = "none";
+        }
+        slides[0].style.display = "block";
+      }
+    }
+    
+    function next(whichSlideshowStartingFrom0) {
+      showSlides(whichSlideshowStartingFrom0, 1);
+    }
+    
+    function prev(whichSlideshowStartingFrom0) {
+      showSlides(whichSlideshowStartingFrom0, -1);
+    }
+    
+    function currentSlide(whichSlideshowStartingFrom0) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n, step) {
+      let i;
+      let slides = document.getElementsByClassName("slideShow")[n].getElementsByClassName("mySlides");
+      let length = slides.length
+      if(n < 0 || n >= slideIndexes.length) {
+        console.log("42")
+      } else {
+        slideIndexes[n] += step
+        if(slideIndexes[n] < 0) {
+          slideIndexes[n] += length
+        }
+        if(slideIndexes[n] >=  length) {
+          slideIndexes[n] %= length
+        }
+        for (i = 0; i < length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndexes[n]].style.display = "block";
+      }
+    }
+  </script>
+  <!-- /slides script -->
+  <!-- /mainpage -->
+  
+  <!-- footer -->
+  <footer class="footer-background w-100">
+    <!-- svg -->
+    <div class="svg-div">
+      <svg
+        id="visual"
+        class="blob-motion-flipped"
+        viewBox="0 0 1000 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
+        <path
+          id="blob6"
+          d="M0 60L41.7 59.8C83.3 59.7 166.7 59.3 250 57.7C333.3 56 416.7 53 500 59C583.3 65 666.7 80 750 86.5C833.3 93 916.7 91 958.3 90L1000 89L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob7"
+          d="M0 90L41.7 85.8C83.3 81.7 166.7 73.3 250 70.2C333.3 67 416.7 69 500 70.8C583.3 72.7 666.7 74.3 750 73.7C833.3 73 916.7 70 958.3 68.5L1000 67L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+        <path
+          style="visibility: hidden"
+          id="blob8"
+          d="M0 94L41.7 88.7C83.3 83.3 166.7 72.7 250 66.5C333.3 60.3 416.7 58.7 500 63.2C583.3 67.7 666.7 78.3 750 84C833.3 89.7 916.7 90.3 958.3 90.7L1000 91L1000 101L958.3 101C916.7 101 833.3 101 750 101C666.7 101 583.3 101 500 101C416.7 101 333.3 101 250 101C166.7 101 83.3 101 41.7 101L0 101Z"
+          fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="miter">
+        </path>
+      </svg>
+
+      <script defer>
+        const animate4 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob6' },
+          { path: '#blob7' },
+          { duration: 15000 }
+        );
+        const animate5 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob7' },
+          { path: '#blob8' },
+          { duration: 15000 }
+        );
+        const animate6 = KUTE.allFromTo(
+          '#blob6',
+          { path: '#blob8' },
+          { path: '#blob6' },
+          { duration: 15000 }
+        );
+  
+        animate4.chain(animate5);
+        animate5.chain(animate6);
+        animate6.chain(animate4);
+        animate4.start();
+      </script>
+    </div>
+    <!-- /svg -->
+
+    <div class="container footer-margin">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 footer-column">
+          <img class="footer-logo" src="../stopka/footer_icons/logo_footer.svg">
+          <div class="footer-email-wydzial">
+            <p class="footer-text">itberries.wh.agh@gmail.com</p>
+            <p class="footer-text">Wydział Humanistyczny AGH<br>Antoniego Gramatyka 8A<br>30-071 Kraków</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 footer-column">
+          <h2 class="footer-header">Mapa strony</h2>
+          <ul class="footer-page-list">
+            <li><a class="footer-text" href="/">O kole</a></li>
+            <li><a class="footer-text" href="../csux/csux.html">CS UX</a></li>
+            <li><a class="footer-text" href="../wspolpraca/index.html">Współpraca</a></li>
+            <li><a class="footer-text" href="/">Dołącz do nas</a></li>
+            <li><a class="footer-text" href="../kontakt/index.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 footer-column">
+          <h2 class="footer-header">Znajdź nas!</h2>
+          <div class="footer-social-icons">
+            <a href="/"><img src="../stopka/footer_icons/facebook.svg"></a>
+            <a href="/"><img src="../stopka/footer_icons/linkedin.svg"></a>
+            <a href="/"><img src="../stopka/footer_icons/Instagram.svg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="credits">
+    <div class="credits-text credits-div-1">© UXberries <span id="year"></span></div>
+    <div class="credits-text credits-div-2">designed by: UXberries</div>
+    <div class="credits-div-3 d-flex flex-column flex-xxl-row">
+      <span class="credits-text">
+        developed by: 
+      </span>
+      <span class="credits-text">
+        Ireneusz Jasinowski<span class="xxl-przecinek">,</span>
+      </span>
+      <span class="credits-text">
+        Maciej Piotrowski
+      </span>
+    </div>
+  </div>
+  <script defer>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <!-- /footer -->
+</body>
+</html>
